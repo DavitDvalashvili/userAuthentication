@@ -8,7 +8,7 @@ const Home = () => {
           {" "}
           Welcome <span>"username"</span>
         </h4>
-        <button>LOGOUT</button>
+        <button className="button">LOGOUT</button>
       </div>
       <ToastContainer />
     </>

@@ -28,7 +28,6 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-
 `;
 
 export default GlobalStyle;

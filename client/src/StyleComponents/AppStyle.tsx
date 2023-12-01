@@ -27,7 +27,7 @@ const AppStyled = styled.div`
     gap: 1.4rem;
   }
 
-  .form_container div {
+  .inputBox {
     display: flex;
     flex-direction: column;
     gap: 0.3rem;
@@ -46,7 +46,7 @@ const AppStyled = styled.div`
     font-style: italic;
   }
 
-  .form_container button {
+  .form_button {
     background-color: rgba(0, 212, 255, 1);
     color: #fff;
     border: none;
@@ -79,7 +79,7 @@ const AppStyled = styled.div`
     color: rgba(0, 212, 255, 1);
   }
 
-  .home_page button {
+  .button {
     background-color: rgb(27, 73, 83);
     color: #fff;
     cursor: pointer;
@@ -90,7 +90,7 @@ const AppStyled = styled.div`
     border: none;
   }
 
-  .home_page button:hover {
+  .button:hover {
     background-color: rgba(0, 212, 255, 1);
   }
 
@@ -98,7 +98,7 @@ const AppStyled = styled.div`
     .home_page {
       font-size: 1.5rem;
     }
-    .home_page button {
+    .button {
       padding: 0.6rem 1rem;
       font-size: 1.5rem;
     }
