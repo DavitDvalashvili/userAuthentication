@@ -33,7 +33,7 @@ const SignUp = () => {
     formState: { errors },
   } = useForm<SignUpInputs>();
 
-  //checks input values and return errors if require
+  //checks input values and return errors if required
   const checkInputs = () => {
     if (
       watch("email") == "" ||
@@ -58,7 +58,7 @@ const SignUp = () => {
       if (response.data.success) {
         // Sign-up successful
         handleSuccess(response.data.message);
-        //after 3 second navigate to login oage
+        //after 3 second navigate to login page
         setTimeout(() => {
           navigate("/login");
         }, 3000);
@@ -69,7 +69,7 @@ const SignUp = () => {
     } catch (error) {
       // Handle errors
       console.error("Sign-up failed", error);
-      handleError("Sign-up failed server error");
+      handleError("Sign-up failed, server error");
     }
   };
 
