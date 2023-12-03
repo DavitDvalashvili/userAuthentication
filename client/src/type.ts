@@ -8,3 +8,7 @@ export type LoginInputs = {
   email: string;
   password: string;
 };
+
+export type myCookies = {
+  token: string;
+};

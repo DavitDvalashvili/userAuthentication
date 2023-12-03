@@ -14,6 +14,7 @@ export const userVerification = (req, res) => {
   }
   jwt.verify(token, TOKEN_KEY, async (err, data) => {
     if (err) {
+      console.log(`jwt.verify error ${err}`);
       return res.json({ status: false });
     } else {
       const user = await User.findById(data.id);

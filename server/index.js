@@ -15,9 +15,15 @@ const PORT = process.env.PORT;
 const MONGO_URL = process.env.MONGO_URL;
 
 //middlewares
-app.use(cors());
-app.use(express.json());
 app.use(cookieParser());
+app.use(express.json());
+app.use(
+  cors({
+    origin: "http://localhost:5173",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
 
 //connect mongodb using mongoose library;
 mongoose
