@@ -14,7 +14,7 @@ const SignUp = () => {
   const handleError = (message: string | undefined) => {
     toast.error(message, {
       position: "bottom-left",
-      autoClose: 2000,
+      autoClose: 1000,
     });
   };
 
@@ -22,7 +22,7 @@ const SignUp = () => {
   const handleSuccess = (message: string) => {
     toast.success(message, {
       position: "bottom-right",
-      autoClose: 2000,
+      autoClose: 1000,
     });
   };
 

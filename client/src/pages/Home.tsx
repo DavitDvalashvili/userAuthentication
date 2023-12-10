@@ -1,53 +1,70 @@
-import { ToastContainer } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 import AppStyled from "../StyleComponents/AppStyle";
 import { useEffect, useState } from "react";
-import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-//import { myCookies } from "../type";
 
 const Home = () => {
-  const [cookies, removeCookie] = useCookies(["token"]);
   const navigate = useNavigate();
-  //const { userName, setUserName } = useState("");
+  const [userName, setUserName] = useState<string>("");
+  const [expired, setExpired] = useState<boolean>(false);
+
+  const token = localStorage.getItem("authToken");
 
   useEffect(() => {
-    const verifyCookie = async () => {
-      if (!cookies) {
+    const refresh = async () => {
+      if (!token || expired) {
         navigate("/login");
-        console.log(cookies);
-      }
-      try {
+      } else {
         const response = await axios.post(
           "http://localhost:3004/",
           {},
-          { withCredentials: true }
+          {
+            headers: {
+              token: token,
+            },
+          }
         );
-        console.log(response);
-        //setUserName(response.data.user);
-      } catch (error) {
-        console.log(error);
+        setUserName(response.data.user);
+        //setExpired(response.data.status);
+        if (!response.data.status) {
+          setExpired(true);
+        }
       }
     };
+    refresh();
+  }, [userName, expired]);
 
-    verifyCookie();
-  }, [cookies, navigate]);
-
-  const Logout = () => {
-    removeCookie("token", { path: "/" });
-    navigate("/signup");
+  const logout = () => {
+    localStorage.removeItem("authToken");
+    setExpired(true);
   };
+
+  const handleGreeting = (message: string) => {
+    toast.info(message, {
+      position: "top-right",
+      autoClose: 1000,
+    });
+  };
+
+  useEffect(() => {
+    if (userName !== "") {
+      handleGreeting(`Welcome ${userName}`);
+    }
+  }, [userName]);
 
   return (
     <AppStyled>
-      <div className="home_page">
-        <h4>
-          Welcome <span>{"dvala"}</span>
-        </h4>
-        <button className="button" onClick={Logout}>
-          LOGOUT
-        </button>
-      </div>
+      {userName && (
+        <div className="home_page">
+          <h4>
+            Welcome <span>{userName}</span> You are logged in
+          </h4>
+          <button className="button" onClick={logout}>
+            LOGOUT
+          </button>
+        </div>
+      )}
       <ToastContainer />
     </AppStyled>
   );

@@ -13,7 +13,7 @@ const Login = () => {
   const handleError = (message: string | undefined) => {
     toast.error(message, {
       position: "bottom-left",
-      autoClose: 2000,
+      autoClose: 1000,
     });
   };
 
@@ -21,7 +21,7 @@ const Login = () => {
   const handleSuccess = (message: string) => {
     toast.success(message, {
       position: "bottom-right",
-      autoClose: 2000,
+      autoClose: 1000,
     });
   };
 
@@ -50,14 +50,15 @@ const Login = () => {
       });
       //displays message ;
       if (response.data.success) {
-        // Sign-up successful
+        // login successful
         handleSuccess(response.data.message);
-        //after 3 second navigate to login page
+        localStorage.setItem("authToken", response.data.token);
+        //after 1 second navigate to login page
         setTimeout(() => {
           navigate("/home");
-        }, 3000);
+        }, 1000);
       } else {
-        // Sign-up failed
+        // log in failed
         handleError(response.data.message);
       }
     } catch (error) {

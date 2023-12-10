@@ -8,7 +8,7 @@ dotenv.config();
 const TOKEN_KEY = process.env.TOKEN_KEY;
 
 export const userVerification = (req, res) => {
-  const token = req.cookies.token;
+  const token = req.headers.token;
   if (!token) {
     return res.json({ status: false });
   }
