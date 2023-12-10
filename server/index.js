@@ -19,7 +19,7 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://user-authentication-468z-davitdvalashvili.vercel.app/",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })

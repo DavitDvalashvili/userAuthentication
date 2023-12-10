@@ -48,11 +48,15 @@ const SignUp = () => {
 
   const submitFunction: SubmitHandler<SignUpInputs> = async (data) => {
     try {
-      const response = await axios.post("http://localhost:3004/signup", data, {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      const response = await axios.post(
+        "https://user-authentication-ashen.vercel.app/signup",
+        data,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
 
       //displays message ;
       if (response.data.success) {
