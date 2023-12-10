@@ -25,6 +25,9 @@ app.use(
   })
 );
 
+// Handle preflight requests
+app.options("*", cors());
+
 //connect mongodb using mongoose library;
 mongoose
   .connect(MONGO_URL, {
