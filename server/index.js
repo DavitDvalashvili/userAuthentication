@@ -14,14 +14,14 @@ const PORT = process.env.PORT;
 const MONGO_URL = process.env.MONGO_URL;
 
 //middlewares
-app.use(express.json());
 app.use(
   cors({
-    origin: "https://user-authentication-client.vercel.app",
+    origin: "*",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
 );
+app.use(express.json());
 
 // Handle preflight requests
 app.options("*", cors());
