@@ -3,7 +3,6 @@ import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
 import mongoose from "mongoose";
-import cookieParser from "cookie-parser";
 import authRoute from "./Routes/AuthRoute.js";
 
 // config dotenv
@@ -15,11 +14,10 @@ const PORT = process.env.PORT;
 const MONGO_URL = process.env.MONGO_URL;
 
 //middlewares
-app.use(cookieParser());
 app.use(express.json());
 app.use(
   cors({
-    origin: "https://user-authentication-468z-davitdvalashvili.vercel.app",
+    origin: "https://user-authentication-client.vercel.app",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })

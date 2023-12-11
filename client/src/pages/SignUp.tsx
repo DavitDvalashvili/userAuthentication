@@ -49,7 +49,7 @@ const SignUp = () => {
   const submitFunction: SubmitHandler<SignUpInputs> = async (data) => {
     try {
       const response = await axios.post(
-        "https://user-authentication-ashen.vercel.app/signup",
+        "https://user-authentication-server.vercel.app/signup",
         data,
         {
           headers: {

@@ -44,7 +44,7 @@ const Login = () => {
   const submitFunction: SubmitHandler<LoginInputs> = async (data) => {
     try {
       const response = await axios.post(
-        "https://user-authentication-ashen.vercel.app/login",
+        "https://user-authentication-server.vercel.app/login",
         data,
         {
           headers: {
