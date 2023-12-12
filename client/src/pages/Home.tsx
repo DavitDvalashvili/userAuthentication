@@ -17,7 +17,7 @@ const Home = () => {
         navigate("/login");
       } else {
         const response = await axios.post(
-          "https://user-authentication-server.vercel.app",
+          "http://localhost:3004/home",
           {},
           {
             headers: {

@@ -43,15 +43,11 @@ const Login = () => {
 
   const submitFunction: SubmitHandler<LoginInputs> = async (data) => {
     try {
-      const response = await axios.post(
-        "https://user-authentication-server.vercel.app/login",
-        data,
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
+      const response = await axios.post("http://localhost:3004/login", data, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
       //displays message ;
       if (response.data.success) {
         // login successful
@@ -59,7 +55,7 @@ const Login = () => {
         localStorage.setItem("authToken", response.data.token);
         //after 1 second navigate to login page
         setTimeout(() => {
-          navigate("/home");
+          navigate("/");
         }, 1000);
       } else {
         // log in failed
