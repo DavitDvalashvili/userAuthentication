@@ -21,6 +21,8 @@ const userSchema = new mongoose.Schema({
   },
 });
 
+// Index on email field
+
 userSchema.pre("save", async function () {
   this.password = await bcrypt.hash(this.password, 12);
 });

@@ -63,8 +63,8 @@ const Login = () => {
       }
     } catch (error) {
       // Handle errors
-      console.error("Sign-up failed", error);
-      handleError("Sign-up failed, server error");
+      console.error("Login failed", error);
+      handleError("Login failed, server error");
     }
   };
 

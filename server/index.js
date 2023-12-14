@@ -29,10 +29,7 @@ app.options("*", cors());
 
 //connect mongodb using mongoose library;
 mongoose
-  .connect(MONGO_URL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(MONGO_URL)
   .then(() => {
     console.log("MongoDB is connected successfully");
   })
