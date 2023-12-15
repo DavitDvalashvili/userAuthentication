@@ -82,7 +82,6 @@ npm run dev
 Before every deployment you need to create build file.
 
 ```
-
 npm run build
 ```
 
