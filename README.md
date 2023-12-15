@@ -1,15 +1,15 @@
-# Entertainment web app
+# userAuthentication
 
 ### Table of Contents
 
 - [Prerequisites](#Prerequisites)
 - [Tech Stack](#Tech-Stack)
+- [Screenshot](#Screenshot)
 - [Getting Started](#Getting-Started)
+- [Build with](#Build-With)
 - [Project Structure](#Project-Structure)
 - [Deployment](#Deployment)
 - [Author](#Author)
-
-#
 
 ### Prerequisites
 
@@ -29,7 +29,33 @@
 - <img src="readme/jwt.png" width="25" style="top: 8px" /> _JWT: JSON Web Token for authentication_
 - <img src="readme/bcrypt.png" width="25" style="top: 8px" /> _bcrypt: Password hashing library for security._
 
-#
+### Interaction
+
+Users should be able to:
+
+Register:
+Create an account on the authentication app by providing necessary information.
+Validate their registration information to ensure accuracy and completeness.
+Login:
+Access their account securely through the login feature.
+Provide authentication credentials to verify their identity.
+
+Logout:
+Safely log out of their account to ensure secure session management.
+
+Notifications:
+Receive notifications.
+Success: Acknowledging successful requests or actions.
+Error: Alerting users about unsuccessful attempts or issues.
+
+### Screenshot
+
+![](./public/preview.png)
+
+### Links
+
+- Solution URL: [Add solution URL here](https://github.com/DavitDvalashvili/userAuthentication)
+- Live Site URL: [Add live site URL here](https://user-authentication-front.vercel.app)
 
 ### Getting Started
 
@@ -51,44 +77,13 @@ npm install
 npm run dev
 ```
 
-#
-
-### Project Structure
-
-```
-|--- components # reusable components
-|--- layouts
-|--- pages
-|   |---|--- api
-|   |---|---|--- login
-|   |---|---|--- movies
-|   |---|---|--- register
-|   |---|---|--- _db.ts
-|   |---|---|--- _verifyToken.ts
-|   |---|--- bookmarked
-|   |---|--- login
-|   |---|--- sign-up
-|   |---|--- tv-series
-|--- public
-|--- styled-components
-|   |---|--- GlobalStyle
-|   |---|--- index.ts # export all components
-|--- types # declare all types
-- bookmark.ts
-- vercel.json # vercel configuration
-- package.json # dependency manager configurations
-
-```
-
-#
-
 ### Deployment
 
 Before every deployment you need to create build file.
 
 ```
+
 npm run build
-```
 
 after this you can use this file to deploy project on server.
 
@@ -96,4 +91,7 @@ after this you can use this file to deploy project on server.
 
 ### Author
 
-- [LinkedIn](https://www.linkedin.com/in/beka-maisuradze-76a730234/)
+- Github profile - [Add your name here](https://github.com/DavitDvalashvili)
+- Linkedin profile - [Add your name here](https://www.linkedin.com/in/davit-dvalashvili-0421b6253)
+- Email - [@your_username](davitdvalashvili1996@gmail.com)
+```
