@@ -4,30 +4,30 @@
 
 - [Prerequisites](#Prerequisites)
 - [Tech Stack](#Tech-Stack)
+- [Interaction](#Interaction)
 - [Screenshot](#Screenshot)
+- [Links](#Links)
 - [Getting Started](#Getting-Started)
-- [Build with](#Build-With)
-- [Project Structure](#Project-Structure)
 - [Deployment](#Deployment)
 - [Author](#Author)
 
 ### Prerequisites
 
-- <img src="readme/npm.png" width="25" style="top: 8px" /> _npm: Node Package Manager for JavaScript_
-- <img src="readme/vite.jpg" width="25" style="top: 8px" /> _Vite: Frontend build tool for modern web development_
-- <img src="readme/typescript.png" width="25" style="top: 8px" /> _TypeScript: Typed superset of JavaScript_
+- <img src="client/public/readme/npm.png" width="25" style="top: 8px" /> _npm: Node Package Manager for JavaScript_
+- <img src="client/public/readme/vite.jpg" width="25" style="top: 8px" /> _Vite: Frontend build tool for modern web development_
+- <img src="client/public/readme/typescript.png" width="25" style="top: 8px" /> _TypeScript: Typed superset of JavaScript_
 
 #
 
 ### Tech Stack
 
-- <img src="readme/nodejs.png" width="25" style="top: 8px" /> _Node.js: JavaScript runtime environment_
-- <img src="readme/expressjs.png" width="25" style="top: 8px" /> _Express: Minimalist web framework for Node.js_
-- <img src="readme/styled-components.png" width="25" style="top: 8px" /> _Styled Components: JavaScript library for styling React components with tagged template literals._
-- <img src="readme/react-hook-form.png" width="25" style="top: 8px" /> _React Hook Form: Library to simplify form management in React._
-- <img src="readme/mongoose.png" width="25" style="top: 8px" /> _Mongoose: MongoDB object modeling for Node.js._
-- <img src="readme/jwt.png" width="25" style="top: 8px" /> _JWT: JSON Web Token for authentication_
-- <img src="readme/bcrypt.png" width="25" style="top: 8px" /> _bcrypt: Password hashing library for security._
+- <img src="client/public/readme/nodejs.png" width="25" style="top: 8px" /> _Node.js: JavaScript runtime environment_
+- <img src="client/public/readme/expressjs.png" width="25" style="top: 8px" /> _Express: Minimalist web framework for Node.js_
+- <img src="client/public/readme/styled-components.png" width="25" style="top: 8px" /> _Styled Components: JavaScript library for styling React components with tagged template literals._
+- <img src="client/public/readme/react-hook-form.png" width="25" style="top: 8px" /> _React Hook Form: Library to simplify form management in React._
+- <img src="client/public/readme/mongoose.png" width="25" style="top: 8px" /> _Mongoose: MongoDB object modeling for Node.js._
+- <img src="client/public/readme/jwt.png" width="25" style="top: 8px" /> _JWT: JSON Web Token for authentication_
+- <img src="client/public/readme/bcrypt.png" width="25" style="top: 8px" /> _bcrypt: Password hashing library for security._
 
 ### Interaction
 
@@ -50,7 +50,7 @@ Error: Alerting users about unsuccessful attempts or issues.
 
 ### Screenshot
 
-![](./public/preview.png)
+![](./client/public/preview.png)
 
 ### Links
 
@@ -84,14 +84,12 @@ Before every deployment you need to create build file.
 ```
 
 npm run build
+```
 
 after this you can use this file to deploy project on server.
-
-#
 
 ### Author
 
 - Github profile - [Add your name here](https://github.com/DavitDvalashvili)
 - Linkedin profile - [Add your name here](https://www.linkedin.com/in/davit-dvalashvili-0421b6253)
 - Email - [@your_username](davitdvalashvili1996@gmail.com)
-```
