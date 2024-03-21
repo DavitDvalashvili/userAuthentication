@@ -17,7 +17,7 @@ const Home = () => {
         navigate("/login");
       } else {
         const response = await axios.post(
-          "https://userauthentication-backend.onrender.com",
+          "http://localhost:3004/",
           {},
           {
             headers: {

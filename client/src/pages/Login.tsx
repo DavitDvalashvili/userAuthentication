@@ -43,15 +43,11 @@ const Login = () => {
 
   const submitFunction: SubmitHandler<LoginInputs> = async (data) => {
     try {
-      const response = await axios.post(
-        "https://userauthentication-backend.onrender.com/login",
-        data,
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
+      const response = await axios.post("http://localhost:3004/login", data, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
       //displays message ;
       if (response.data.success) {
         // login successful

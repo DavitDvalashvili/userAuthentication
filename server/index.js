@@ -14,13 +14,7 @@ const PORT = process.env.PORT;
 const MONGO_URL = process.env.MONGO_URL;
 
 //middlewares
-app.use(
-  cors({
-    origin: "https://user-authentication-front.vercel.app",
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true,
-  })
-);
+app.use(cors());
 
 app.use(express.json());
 
