@@ -36,6 +36,7 @@ Users should be able to:
 Register:
 Create an account on the authentication app by providing necessary information.
 Validate their registration information to ensure accuracy and completeness.
+
 Login:
 Access their account securely through the login feature.
 Provide authentication credentials to verify their identity.
